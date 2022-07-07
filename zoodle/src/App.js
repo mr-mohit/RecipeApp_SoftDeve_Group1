@@ -1,16 +1,17 @@
+//import logo from './logo.svg';
+
 import './App.css';
 import React from 'react';
 import Navbar2 from './components/navbar/index';
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Navbar2/>
-      
-    </>
-    
-    
-    
+      <div>
+        <img src="Initialpage-background.jpeg" className='background' alt=''/>
+      </div>
+    </div>
     
     // <div className="App">
     
