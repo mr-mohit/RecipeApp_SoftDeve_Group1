@@ -1,3 +1,4 @@
+//this is the file that connects App.js and index.html
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';

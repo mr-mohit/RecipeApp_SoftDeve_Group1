@@ -1,0 +1,20 @@
+{
+  "name": "recipeapp_softdeve_group1",
+  "version": "1.0.0",
+  "description": "Recipe App \r README file should include a brief description of the app and packages that are required to run it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjyoo03/RecipeApp_SoftDeve_Group1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjyoo03/RecipeApp_SoftDeve_Group1/issues"
+  },
+  "homepage": "https://github.com/jjyoo03/RecipeApp_SoftDeve_Group1#readme"
+}
