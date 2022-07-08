@@ -9,7 +9,13 @@ function App() {
     <div className="App">
       <Navbar2/>
       <div>
-        <img src="Initialpage-background.jpeg" className='background' alt=''/>
+        <img src="background.jpeg" className='background' alt=''/>
+      </div>
+      <div className='title'>
+        Zoodle
+      </div>  
+      <div className='quote'>
+        "Cutting food wate is a delicious way of saving money, helping to feed the world and protect the planet." -Tristram Stuart-
       </div>
     </div>
     

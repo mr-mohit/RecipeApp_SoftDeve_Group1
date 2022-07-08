@@ -37,19 +37,33 @@
   }
 } */
 
-/* .App{
-  background-image:"./images/Initialpage-background.jpeg";
-  position: fixed;
-  min-width: 100%;
-  min-height: 100%;
-  background-size: cover;
-  background-position: center;
-} */
-
 .background{
   position: fixed;
   min-width: 100%;
   min-height: 100%;
   background-size: cover;
   background-position: center;
+  opacity: 0.7;
+}
+
+.quote{
+  color: white;
+  position: relative;
+  font-size: 3.5rem;
+  box-sizing: border-box;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.title{
+  color: white;
+  position: relative;
+  font-size: 7rem;
+  box-sizing: border-box;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 70px 0;
 }

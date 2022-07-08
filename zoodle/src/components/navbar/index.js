@@ -8,7 +8,7 @@ const Navbar2 = () => {
     return (
     <Navbar bg="light" expand="lg">
         <Container>
-            <Navbar.Brand href="#home">Zoodle</Navbar.Brand>
+            <Navbar.Brand href="#home"><img src="zsmaller.png" className='zlogo' alt=''/></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                 <Nav>
