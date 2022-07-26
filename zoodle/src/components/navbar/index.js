@@ -6,19 +6,17 @@ import './NavbarElement.css'
 
 const Navbar2 = () => {
     return (
-    <Navbar bg="light" expand="lg">
-        <Container>
-            <Navbar.Brand href="#home"><img src="zsmaller.png" className='zlogo' alt=''/></Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-            <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-                <Nav>
-                    <Nav.Link href="#about">About |</Nav.Link>
-                    <Nav.Link href="#link">Sign In |</Nav.Link>
-                    <Nav.Link href="#link2">Sign Up</Nav.Link>
-                </Nav>
-            </Navbar.Collapse>
-        </Container>
-    </Navbar>
+        <div className="App">
+           <div>
+           <img src="background.jpeg" className='background' alt=''/>
+          </div>
+          <div className='title text-dark' >
+           Zoodle
+          </div>  
+          <div className='quote text-dark'>
+           "Cutting food waste is a delicious way of saving money, helping to feed the world and protect the planet." -Tristram Stuart-
+          </div>
+        </div>
   )
 }
 

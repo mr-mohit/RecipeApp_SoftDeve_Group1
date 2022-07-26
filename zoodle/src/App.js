@@ -3,42 +3,36 @@
 import './App.css';
 import React from 'react';
 import Navbar2 from './components/navbar/index';
-
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect
+} from "react-router-dom";
+import SharedReccipe from './components/navbar/SharedRecipe'
+import Index from './components/navbar/index'
 function App() {
   return (
-    <div className="App">
-      <Navbar2/>
-      <div>
-        <img src="background.jpeg" className='background' alt=''/>
-      </div>
-      <div className='title'>
-        Zoodle
-      </div>  
-      <div className='quote'>
-        "Cutting food wate is a delicious way of saving money, helping to feed the world and protect the planet." -Tristram Stuart-
-      </div>
-    </div>
-    
-    // <div className="App">
-    
-      
-    // <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-
-        
-    //   </header>
-    // </div>
+    <Router>
+      <Navbar bg="light" expand="lg">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="/">Home |</Nav.Link>
+            <Nav.Link href="#about">About |</Nav.Link>
+            <Nav.Link href="#link">Sign In |</Nav.Link>
+            <Nav.Link href="#link2">Sign Up |</Nav.Link>
+            <Nav.Link href="/SharedRecipe">Shared Recipe</Nav.Link>
+          </Nav>       
+        </Navbar.Collapse>
+      </Navbar>
+      <Switch>
+        <Route render ={()=> <Index />} exact path="/" />
+        <Route render ={()=> <SharedReccipe />} path="/SharedRecipe" />
+      </Switch>
+    </Router>
   );
 }
 
