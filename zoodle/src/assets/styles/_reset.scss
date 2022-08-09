@@ -1,0 +1,63 @@
+body {
+	margin: 0;
+	font-family: $font-primary;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 170%;
+}
+
+h1 {
+	font-size: 54px;
+	font-weight:bolder;
+}
+
+h2 {
+	font-size: 44px;
+	font-weight:700;
+}
+
+h1, h2{
+	font-family: $font-secondary;
+	cursor: default;
+}
+
+h3, h4, h5, h6 {
+	font-family: $font-primary;
+	cursor: default;
+}
+
+img {
+	width:100%;
+	height:auto;
+}
+
+button {
+	cursor:pointer;
+	font-family: $font-secondary;
+
+	a {
+		display: block;
+		color: unset;
+		&:hover { color: unset; }
+	}
+}
+
+a {
+	color: $color-links;
+	cursor:pointer;
+	
+	&:hover {
+		color: darken($color: $color-links, $amount: $darken-factor);
+	}
+}

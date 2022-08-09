@@ -1,0 +1,30 @@
+@mixin tranform-to-center {
+    position:absolute;
+	font-family: $font-secondary;
+	left:50%;
+	top:50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+@mixin flex-to-center {
+    display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mx-auto {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.d-block {
+	display:block;
+}
+
+.align-items-start {
+	align-items: start !important;
+}
+
+.mr-1 { margin-right: 5px; }
+.mr-2 { margin-right: 10px; }
+.mr-3 { margin-right: 15px; }

@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@700;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+@import "variables";
+@import "helpers";
+@import "reset";
+@import "input-components";
+@import "layouts";
+@import "animations";
+
+.site-header {
+	padding: $padding-default;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #f5f5f5;
+	box-shadow: 0 0 5px 1px rgba(0,0,0,0.1);
+
+	.brand {
+		font-size: 36px;
+		margin: 0 30px 0 0;
+		color: $color-primary;
+	}
+
+	nav {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	nav a {
+		color: black;
+	}
+
+	.sep {
+		font-weight: bold;
+		color: #AAA;
+	}
+
+	.primary-nav {
+		a {
+			padding: 5px 30px 8px 30px;
+			border-radius: 5px;
+			background: rgba(0,0,0,0.050);
+			font-weight: bold;
+			color: #444;
+			border: 2px solid #CCC;
+		}
+
+		a:hover {
+			background-color: rgba(0,0,0,0.080);
+		}
+	}
+
+	.secondary-nav button {
+		margin: 0;
+	}
+}
+
+.site-footer {
+	padding: $padding-default;
+}
+
+.btn {
+	border:none;
+	border-radius:15px;
+	padding:15px;
+	text-align: center;
+}
+
+.login-wrapper {
+	@include flex-to-center;
+	position:relative;
+	width:100%;
+	min-height:100vh;
+	background:url(../images/waves.svg);
+	background-size: cover;
+	padding:20px;
+
+	.login-form {
+		width:440px;
+		margin:0 auto;
+		background:white;
+		border-radius:32px;
+		padding:50px;
+	
+		h2 {
+			margin-top:0;
+		}
+
+		.form-switch-hint {
+			margin-top: -15px;
+			color: #888;
+			text-align: center;
+		}
+	}
+}
+
+.signup-wrapper {
+	@include flex-to-center;
+	position:relative;
+	width:100%;
+	min-height:100vh;
+	background:url(../images/waves.svg);
+	background-size: cover;
+	padding:20px;
+
+	.signup-form {
+		width:620px;
+		margin:0 auto;
+		background:white;
+		border-radius:32px;
+		padding:50px;
+	
+		h2 {
+			margin-top:0;
+		}
+
+		.form-switch-hint {
+			margin-top: -15px;
+			color: #888;
+			text-align: center;
+		}
+	}
+}
+
+.form {
+	.field-group {
+		margin-bottom:25px;
+
+		label {
+			display:block;
+			margin-bottom:12px;
+			font-weight:bold;
+		}
+
+		input {
+			background:transparent;
+			border:1px solid $color-gs-default;
+			padding:15px;
+			width:100%;
+			border-radius:15px;
+			transition: box-shadow $timer-1;
+			outline:none;
+
+			&:focus {
+				box-shadow: 0 0 0 6px rgba(0, 144, 228, 0.1);
+			}
+		}
+	}
+
+	.seperator {
+		position:relative;
+		width:200px;
+		margin:35px auto;
+		font-family: $font-secondary;
+
+		span {
+			@include tranform-to-center;
+			background:white;
+			padding:10px;
+		}
+	}
+
+	.actions {
+		margin-top:40px;
+
+		.btn {
+			margin:0 auto;
+			transition: background-color $timer-1, color $timer-1, transform $timer-0;
+			font-size:20px;
+	
+			&.btn-block {
+				display:block;
+				width:100%;
+				margin:0 auto;
+			}
+		}
+	
+		.btn:first-of-type {
+			background-color: $color-popout;
+			color:white;
+	
+			&:hover {
+				background-color: darken($color: $color-popout, $amount: $darken-factor);
+			}
+		}
+	
+		.btn:nth-of-type(2) {
+			background-color: $color-gs-lg;
+			color:$color-gs-dg;
+			width:90%;
+			min-width:280px;
+	
+			&:hover {
+				background-color: darken($color: $color-gs-lg, $amount: $darken-factor);
+			}
+		}
+
+		.btn:focus {
+			transform: scale(0.95);
+		}
+	
+	}
+}
+
+.nav-arrows {	
+	font-weight: bold;
+
+	i {
+		margin-right: 8px;
+		transition: transform 1.5s;
+	}
+
+	&:hover > i {
+		animation: hover-left 1.5s infinite;
+	}
+}
+
+.site-footer {
+	background-color:$color-primary;
+	color:#fff;
+	padding-top: 30px;
+
+	.row {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.brand {
+		margin-top: 15px; 
+
+		.site-name {
+			font-size: 36px;
+		}
+	}
+
+	.col {
+		min-width: 200px;
+		width: auto;
+	}
+
+	.col:not(.brand) {
+		
+	}
+
+	nav {
+		display:flex;
+		flex-direction: column;
+		
+
+		a {
+			margin-bottom:10px;
+			background-color: rgba(255,255,255,0.1);
+			padding:10px;
+			border-radius:5px;
+			color:white;
+			box-shadow: 0 0 10px -5px rgba(0,0,0,0.5);
+			cursor:pointer;
+			transition: background-color $timer-1;
+			border:1px solid rgba(255,255,255,0.2);
+
+			&:hover {
+				background-color: rgba(255,255,255,0.2);
+			}
+		}
+	}
+}
+
+#copyright {
+	text-align: center;
+	color:rgba(255,255,255,0.4);
+}
+
+@media all and (max-width: 800px) {
+	.site-footer .brand { margin-bottom: 20px; }
+	.site-footer .col { width: 100%; padding: 0; margin-bottom: 15px;}
+	.site-footer .row { justify-content: start; }
+}
