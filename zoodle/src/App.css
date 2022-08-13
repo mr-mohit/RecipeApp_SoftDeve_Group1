@@ -1,55 +1,26 @@
-/* .App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 30s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-.background{
-  position: fixed;
+body {
   min-width: 100%;
   min-height: 100%;
   background-size: cover;
   background-position: center;
-  opacity: 0.7;
+  background-attachment: fixed;
+  opacity: 1;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h1:first-of-type, h2:first-of-type, h3:first-of-type, h4:first-of-type, h5:first-of-type, h6:first-of-type, p:first-of-type {
+  margin-top: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 15px;
 }
 
 .quote{
-  color: white;
   position: relative;
-  font-size: 3.5rem;
+  font-size: clamp(16px, 2vw, 20px);
   box-sizing: border-box;
   width: 50%;
   margin: auto;
@@ -58,12 +29,126 @@
 }
 
 .title{
-  color: white;
   position: relative;
-  font-size: 7rem;
+  font-size: clamp(26px, 3vw, 54px);
   box-sizing: border-box;
   width: 50%;
   margin: auto;
   text-align: center;
-  padding: 70px 0;
+}
+
+.rounded { 
+  border-radius: 10px;
+}
+
+.primary-on-white {
+  background: white;
+  color: black;
+}
+
+.default-layout { 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(20px, 2vw, 60px) 20px;
+}
+
+.container-margin {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.review {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #420039;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.review .user-info img { 
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.review .user-name {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.fa-star { 
+  color: rgb(226, 230, 0);
+}
+
+.section-padding {
+  padding: 0 20px 0 20px;
+}
+
+.login-type {
+  color:  #555;
+  margin-top: -10px; 
+  margin-bottom: 20px;
+  display: block;
+}
+
+.recipe-list .recipe {
+  padding: 10px;
+  background: #eee;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recipe-list .recipe-price { font-weight: bold; }
+
+.recipe-list .recipe p { 
+  margin: 0;
+}
+
+.price-filter {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.price-filter input {
+  padding: 8px;
+  background: #eee;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.intake-form p {
+  margin-bottom: 5px;
+}
+
+.intake-form input[type='text'], select {
+  padding: 10px;
+  background: #eee;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.intake-form button {
+  display: block;
+  max-width: 200px;
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+.intake-form input[type='radio'] {
+  margin-right: 15px;
 }

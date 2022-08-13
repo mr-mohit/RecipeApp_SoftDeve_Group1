@@ -1,44 +1,29 @@
 //import logo from './logo.svg';
 
 import './App.css';
+import './assets/styles/index.scss';
 import React from 'react';
-import Navbar2 from './components/navbar/index';
+import DefaultLayout from './components/DefaultLayout';
+import HomePage from './pages/Homepage';
+import LoginPage from './pages/LoginPage';
+import RecipiesPage from './pages/RecipiesPage';
+import SignupPage from './pages/SignupPage';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CalorieIntakePage from './pages/CalorieIntakePage';
 
 function App() {
   return (
     <div className="App">
-      <Navbar2/>
-      <div>
-        <img src="background.jpeg" className='background' alt=''/>
-      </div>
-      <div className='title'>
-        Zoodle
-      </div>  
-      <div className='quote'>
-        "Cutting food wate is a delicious way of saving money, helping to feed the world and protect the planet." -Tristram Stuart-
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<DefaultLayout child={<HomePage/>}/>}></Route>
+          <Route path="/calorie-intake" element={<DefaultLayout child={<CalorieIntakePage/>}/>}></Route>
+          <Route path="/recipies" element={<DefaultLayout child={<RecipiesPage/>}/>}></Route>
+          <Route path="/login" element={<LoginPage/>}></Route>
+          <Route path="/signup" element={<SignupPage/>}></Route>
+        </Routes>
+		  </BrowserRouter>
     </div>
-    
-    // <div className="App">
-    
-      
-    // <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-
-        
-    //   </header>
-    // </div>
   );
 }
 
