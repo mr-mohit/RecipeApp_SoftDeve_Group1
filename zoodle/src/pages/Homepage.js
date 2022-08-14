@@ -27,6 +27,7 @@ function HomePage() {
                     <NewIngredient onAddIngredient={addNewIngredientHandler} />
                     <IngredientList ingredients={ingredientArray}/>
                 </div>
+                <button>Search</button>
             </div>
         </div>
     )
