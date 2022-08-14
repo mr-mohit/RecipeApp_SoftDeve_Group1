@@ -7,7 +7,7 @@ function SiteFooter() {
                 <div className="brand col-33">
                     <h2 className="site-name">Zoodle</h2>
                     <p>
-                        Lorem Ipsum.
+                        Where Environmental Impact Starts with Your Food
                     </p>
                 </div>
 
